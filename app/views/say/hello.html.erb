@@ -1,0 +1,74 @@
+
+<h1>Hello dub step central</h1>
+<p>It is now <%= @time %></p>
+<p><%= link_to "Goodbye Friend", say_goodbye_path %>!</p>
+
+<strong>JS demo with mp4, webm, ogv</strong>
+   <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="640" height="360"
+  poster="http://video-js.zencoder.com/oceans-clip.png"
+  data-setup='{"example_option":true}'>
+ <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+ <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+ <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+ <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+
+<strong>Ooyala HLS embedded in video object</strong>
+
+
+<p>
+    <video
+        src="http://player.ooyala.com/player/appletv/BidWt2cDo3y5dws5gA52m-zHY5nbhYG2.m3u8"
+        height="360" width="640"
+    >
+    </video></br>
+</p>
+
+
+
+<strong>Ooyala HLS in videoJS</strong>
+     <video id="my_video_1" class="video-js vjs-default-skin" controls
+        preload="auto" width="640" height="360" poster="http://cdn2.vox-cdn.com/assets/3016083/00000.MTS.Still007.jpg"
+        data-setup="{}">
+        <source src="http://player.ooyala.com/player/appletv/BidWt2cDo3y5dws5gA52m-zHY5nbhYG2.m3u8" type='application/vnd.apple.mpegurl'/>
+    </video>
+    <strong>Unicord Once in videoJS</strong>
+
+   <video id="my_video_1" class="video-js vjs-default-skin" controls
+        preload="auto" width="640" height="360" poster="http://cdn2.vox-cdn.com/assets/3016083/00000.MTS.Still007.jpg"
+        data-setup="{}">
+        <source src="http://once.unicornmedia.com/now/od/auto/1a4d9840-e4bc-4417-bd49-0c42e517cb7e/ce6d2bac-df25-4296-af88-3f39eccdbefd/6bf08e15-dfbd-4747-b711-ee1bae6b8eb5/content.once" type='application/vnd.apple.mpegurl'/>
+    </video>
+     <strong>Sample ABR HLS sample in video JS</strong>
+
+ <video id="my_video_1" class="video-js vjs-default-skin" controls
+        preload="auto" width="640" height="360" poster="http://cdn2.vox-cdn.com/assets/3016083/00000.MTS.Still007.jpg"
+        data-setup="{}">
+        <source src="http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8" type='application/vnd.apple.mpegurl'/>
+    </video>
+
+  <strong>Ooyala HTML5</strong>
+
+<div id='ooyalaplayer1' style='width:640px;height:360px'></div>
+
+<script>
+OO.ready(function() { OO.Player.create('ooyalaplayer1', '53ODNibzoaPAveXAS50wGEMx8hOulazy'); });
+</script>
+<noscript><div>Please enable Javascript to watch this video</div></noscript>
+
+<div id='playerwrapper' style='width:640px;height:360px;'></div>
+<script> var videoPlayer = OO.Player.create('playerwrapper','53ODNibzoaPAveXAS50wGEMx8hOulazy', { onCreate: function(player) { window.messageBus = player.mb; }}); window.messageBus.subscribe(OO.EVENTS.PLAYING, 'example', function(eventName) { alert("Player is now playing!!!"); }); 
+window.messageBus.publish(OO.EVENTS.PLAY); window.messageBus.addDependent(OO.EVENTS.PAUSE, 'user_allowed_pause', 'example', function(eventName) { CreateConfirmationDialog({ onOk: function() { window.messageBus.publish('user_allowed_pause');
+} 
+}); 
+}); 
+</script>
+
+
+
+
+
+
+
+

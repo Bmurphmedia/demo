@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+  <link href="//vjs.zencdn.net/4.7/video-js.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/4.7/video.js"></script>
+<script src='//player.ooyala.com/v3/39dee535ed704c4bacc94c912f0a5a23?&platform=html5-priority'></script>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
